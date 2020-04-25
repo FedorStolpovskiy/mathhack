@@ -1,0 +1,157 @@
+body{
+    font-family: Roboto;
+}
+
+
+.menu{
+    margin: 0;
+    margin-top: 180px;
+    padding: 0;
+}
+
+header{
+    margin-top: 30px;
+    
+}
+
+.menu ul, .menu ol{
+    list-style: none;
+    
+}
+
+.menu > ul{
+    display: flex;
+    justify-content: center;
+}
+
+.menu > ul li > a{
+    display: block;
+    background-color: #000000;
+    padding: 15px 30px 15px 40px;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+
+
+.menu > ul li{
+    position: relative;
+    border: 1px solid #ffffff;
+}
+
+
+
+.menu li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.menu li ul{
+    position: absolute;
+    min-width: 400px;
+    display: none;
+    margin-left: -41px;
+}
+
+.menu li > ul li{
+    border: 1px solid #ffffff;
+}
+
+.menu li > ul li a{
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #000000;
+}
+
+.menu li:hover > ul{
+    display: block;
+    z-index: 1;
+}
+
+.mathhack, .tagline{
+    display: inline-block;
+}
+
+top{
+    position: absolute;
+    width: 1050px;
+    height: 129px;
+    left: 158px;
+    top: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+
+
+.mathhack a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Roboto;
+    font-size: 64px;
+    padding: 27px;
+}
+
+.tagline{
+    margin-top: 5px;
+    font-size: 46px;
+    font-family: Roboto;
+
+}
+
+.content_tagline{
+    position: absolute;
+    width: 1050px;
+    height: 150px;
+    left: 158px;
+    top: 300px;
+
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 75px;
+}
+
+.main_text{
+    position: absolute;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 46px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    width: 598px;
+    height: 450px;
+    left: 610px;
+    top: 450px;
+    
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+.photo{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: 158px;
+    top: 450px;
+    border: 1px solid #ffffff;
+}

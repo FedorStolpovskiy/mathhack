@@ -1,0 +1,107 @@
+body{
+    background-color: #ffffff;
+    margin-left: 158px;
+    margin-right: 158px;
+    padding: 0;
+    list-style: none;
+    font-family: Roboto;
+} 
+
+a{
+    text-decoration: none;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: white;
+    font-size: 34pt;
+}
+
+.menu_list{
+    height: 100px;
+    width: 360px;
+    margin-left: 60px;
+    text-align: center;
+    background-color: black;
+    border: white solid 1px;
+    position: relative;
+    
+}
+
+
+
+.square, .lenght, .angel, .equation, .middle_line{
+    height: 90px;
+    width: 570px;
+    margin-left: 100%;
+    background-color: black;
+    margin-bottom: auto;
+    position: relative;
+    border: 1px solid white;
+    top: -999em;
+    opacity: 0;
+    text-align: center;
+}
+
+li a{
+    font-size: 30pt;
+    margin-top: 24px;
+}
+
+
+.menu_list:hover .square{
+    top: -55px;
+    opacity: 1;
+}
+
+.menu_list:hover .lenght{
+    top: -157px;
+    opacity: 1;
+}
+.menu_list:hover .angel{
+    top: -259px;
+    opacity: 1;
+}
+
+.menu_list:hover .equation{
+    top: -361px;
+    opacity: 1;
+}
+
+.menu_list:hover .middle_line{
+    top: -463px;
+    opacity: 1;
+}
+header{
+    margin-top: 30px;
+    border: 1px solid #000000;
+    margin-bottom: 30px;
+    height: 129px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+footer{
+    margin-top: 100;
+}
+
+.mathhack{
+    margin-top: 27px;
+    margin-left: 33px;
+    font-size: 70px;
+    display: inline;
+    position: absolute;
+}
+
+.tagline{
+    margin-top: auto;
+    height: 160px;
+    width: 600px;
+    margin-left: 450px;
+    font-size: 46px;
+}
