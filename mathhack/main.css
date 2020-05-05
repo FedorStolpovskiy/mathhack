@@ -60,21 +60,21 @@ li a{
 }
 
 .menu_list:hover .lenght{
-    top: -157px;
+    top: -55px;
     opacity: 1;
 }
 .menu_list:hover .angel{
-    top: -259px;
+    top: -55px;
     opacity: 1;
 }
 
 .menu_list:hover .equation{
-    top: -361px;
+    top: -55px;
     opacity: 1;
 }
 
 .menu_list:hover .middle_line{
-    top: -463px;
+    top: -55px;
     opacity: 1;
 }
 header{
@@ -87,7 +87,10 @@ header{
 }
 
 footer{
-    margin-top: 100;
+    line-height: 50px;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .mathhack{
@@ -99,9 +102,9 @@ footer{
 }
 
 .tagline{
-    margin-top: auto;
+    margin-top: 10px;
     height: 160px;
     width: 600px;
     margin-left: 450px;
-    font-size: 46px;
+    font-size: 43px;
 }
