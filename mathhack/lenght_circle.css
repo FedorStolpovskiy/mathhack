@@ -155,3 +155,9 @@ top{
     top: 450px;
     border: 1px solid #ffffff;
 }
+
+
+img{
+    width: 450;
+    height: 450px;
+}
