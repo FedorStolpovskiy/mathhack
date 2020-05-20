@@ -2,7 +2,7 @@ body{
     font-family: Roboto;
 }
   
-@media all and (max-width: 800px){
+@media all and (max-width: 799px){
 
 .menu *{
     margin: 0;
@@ -185,7 +185,7 @@ input.toggleSubmenu:checked ~ a{
 }
 
 
-@media all and (min-width: 801px){
+@media all and (min-width: 800px){
 
 header{
     width: auto;
