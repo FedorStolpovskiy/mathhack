@@ -1,110 +1,322 @@
 body{
-    background-color: #ffffff;
-    margin-left: 158px;
-    margin-right: 158px;
-    padding: 0;
-    list-style: none;
     font-family: Roboto;
-} 
+}
+  
+@media all and (max-width: 799px){
 
-a{
-    text-decoration: none;
+.menu *{
+    margin: 0;
+    padding: 0;
 }
 
-
-
-ul{
+.menu ul,
+.menu ol{
     list-style: none;
 }
 
-a{
-    color: white;
-    font-size: 34pt;
+.menu > ul{
+    display: flex;
+    justify-content: center;
 }
 
-.menu_list{
-    height: 100px;
-    width: 360px;
-    margin-left: 60px;
-    text-align: center;
-    background-color: black;
-    border: white solid 1px;
+.menu > ul li{
     position: relative;
-    
+    border-right: 1px solid #fff;
 }
 
+.menu > ul li:first-child{
+    border-left: 1px solid #fff;
+}
 
+.menu > ul li:last-child{
+    border-right: 1px solid #fff;
+}
+      
+.menu > ul li a{
+    display: block;
+    background: #000000;
+    padding: 15px 30px 15px 40px;
+    font-size: calc(1em + 4vw);
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+}
 
-.square, .lenght, .angel, .equation, .middle_line{
-    height: 90px;
-    width: 570px;
-    margin-left: 100%;
-    background-color: black;
-    margin-bottom: auto;
-    position: relative;
-    border: 1px solid white;
-    top: -999em;
-    opacity: 0;
+.menu li a:hover{
+    background: #000;    
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+}
+       
+.menu li ul{
+    position: absolute;
+    min-width: 280px;
+    display: none;
+}
+
+.menu li > ul li{
+    border: 1px solid #fff;
+}
+
+.menu li > ul li a{
+    padding: 10px;
+    text-transform: none;
+    background: #000;
+}
+
+.menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+.menu li:hover > ul{
+    display: block;
+}
+
+.menu [type="checkbox"],
+.menu label.toggleSubmenu{
+    display: none;
+}
+
+.menu label.toggleMenu{
+    background: #000;
+    color: #fff;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: calc(1em + 2vw);
     text-align: center;
-}
-
-li a{
-    font-size: 30pt;
-    margin-top: 24px;
+    cursor: pointer;
+    position: relative;
 }
 
 
-.menu_list:hover .square{
-    top: -55px;
-    opacity: 1;
+.menu{
+    overflow: hidden;
 }
 
-.menu_list:hover .lenght{
-    top: -55px;
-    opacity: 1;
-}
-.menu_list:hover .angel{
-    top: -55px;
-    opacity: 1;
+.menu ul{
+    display: block;
+    max-height: 0;
+    transition: max-height 0.3s;
 }
 
-.menu_list:hover .equation{
-    top: -55px;
-    opacity: 1;
+.menu li>ul li ul{
+    position: absolute;
+    right: auto;
+    top: auto;
 }
 
-.menu_list:hover .middle_line{
-    top: -55px;
-    opacity: 1;
+.menu label.toggleMenu{
+    display: block;
 }
-header{
-    margin-top: 30px;
-    border: 1px solid #000000;
-    margin-bottom: 30px;
-    height: 129px;
+
+input.toggleMenu:checked + label.toggleMenu{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+input.toggleMenu:checked ~ ul,
+input.toggleSubmenu:checked ~ ul{
+    display: block;
+    position: relative;
+    max-height: 5000px;
+    transition: max-height 2s ease-in;
+}
+
+.menu label.toggleSubmenu{
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
-    border-radius: 30px;
+    height: 100%;
+    cursor: pointer;
+    display: block;
 }
 
-footer{
-    line-height: 50px;
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+input.toggleSubmenu:checked ~ a{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 
 .mathhack{
-    margin-top: 27px;
-    margin-left: 33px;
-    font-size: 70px;
-    display: inline;
-    position: absolute;
+    list-style: none;
+    text-align: center;
+    font-size: calc(1em + 7vw);
+    position: relative;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.mathhack a{
+    color: #000;
+    font-family: Roboto;
+    text-decoration: none;
 }
 
 .tagline{
-    margin-top: 10px;
-    height: 160px;
-    width: 600px;
-    margin-left: 450px;
-    font-size: 43px;
+    display: none;
+}
+
+
+
+.main_text{
+    margin-top: 0.1em;
+    background-color: #000;
+    color: #fff;
+    font-size: calc(1em + 3vw);
+}
+
+}
+
+
+@media all and (min-width: 800px){
+
+.menu{
+    margin-left: 11.9%;
+    margin-right: 11.9%;
+}
+
+.menu *{
+    margin-top: 0px;
+}
+
+.menu ul,
+.menu ol{
+    list-style: none;
+}
+
+.menu > ul{
+    display: block;
+    justify-content: center;
+    width: 30%;
+}
+
+.menu > ul li{
+    position: relative;
+    border-right: 1px solid #fff;
+}
+
+
+    
+.menu > ul li a{
+    display: block;
+    background: #000000;
+    padding: 15% 0% 15% 3%;
+    font-size: calc(1em + 1vw);
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover{
+    background: #000;    
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+}
+    
+.menu li ul{
+    position: absolute;
+    display: none;
+    width: calc(100% * 70 / 30);
+    margin-left: 100%;
+    top: 0;
+}
+
+
+.menu li > ul li a{
+    font-size: 3vh;
+    padding: 3%;
+    text-transform: none;
+    background: #000;
+}
+
+.menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+.menu li:hover > ul{
+    display: block;
+    z-index: 1;
+}
+    
+.menu [type="checkbox"],
+.menu label.toggleSubmenu{
+    display: none;
+}
+
+.menu label.toggleMenu{
+    background: #000;
+    color: #fff;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+    cursor: pointer;
+    position: relative;
+}
+
+.mathhack, .tagline, .center_space{
+    display: inline-block;
+}
+
+
+.tagline{
+    width: calc(100% - 300px - 6% - 6%);
+    margin-right: 5%;
+    text-align: right;
+}
+
+.top{
+    margin-top: 0.5em;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    font-size: calc(1em + 2vh);
+}
+
+.mathhack{
+    margin-bottom: 1%;
+    margin-left: 5%;
+    width: 300px;
+    font-size: calc(1em + 2vw);
+    text-decoration: none;
+}
+
+.mathhack a{
+    text-decoration: none;
+    color: #000;
+}
+
+content{
+    margin-left: 11.9%;
+    margin-right: 11.9%;
+    margin-top: 1vh;
+    width: 100%;
+    position: absolute;
+}
+
+.main_text{
+    background-color: #000000;
+    color: #fff;
+    position: absolute;
+    display: inline-flex;
+    font-size: calc(1vw);
+    width: calc(100% - 11.9% - 11.9%);
+    margin-bottom: 1%;
+}
+
 }

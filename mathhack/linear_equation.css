@@ -1,22 +1,17 @@
 body{
     font-family: Roboto;
 }
+  
+@media all and (max-width: 799px){
 
-
-.menu{
+.menu *{
     margin: 0;
-    margin-top: 180px;
     padding: 0;
 }
 
-header{
-    margin-top: 30px;
-    
-}
-
-.menu ul, .menu ol{
+.menu ul,
+.menu ol{
     list-style: none;
-    
 }
 
 .menu > ul{
@@ -24,127 +19,327 @@ header{
     justify-content: center;
 }
 
-.menu > ul li > a{
-    display: block;
-    background-color: #000000;
-    padding: 15px 30px 15px 40px;
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s ease;
-}
-
-
-
 .menu > ul li{
     position: relative;
-    border: 1px solid #ffffff;
+    border-right: 1px solid #fff;
 }
 
+.menu > ul li:first-child{
+    border-left: 1px solid #fff;
+}
 
+.menu > ul li:last-child{
+    border-right: 1px solid #fff;
+}
+      
+.menu > ul li a{
+    display: block;
+    background: #000000;
+    padding: 15px 30px 15px 40px;
+    font-size: calc(1em + 4vw);
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+}
 
 .menu li a:hover{
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-    transition: all 0.5s ease;
+    background: #000;    
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
 }
-
+       
 .menu li ul{
     position: absolute;
-    min-width: 400px;
+    min-width: 280px;
     display: none;
-    margin-left: -41px;
 }
 
 .menu li > ul li{
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
 }
 
 .menu li > ul li a{
     padding: 10px;
+    text-transform: none;
+    background: #000;
+}
+
+.menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+.menu li:hover > ul{
+    display: block;
+}
+
+.menu [type="checkbox"],
+.menu label.toggleSubmenu{
+    display: none;
+}
+
+.menu label.toggleMenu{
+    background: #000;
+    color: #fff;
+    display: none;
+    padding: 15px 40px;
     text-transform: uppercase;
-    background-color: #000000;
+    font-size: calc(1em + 2vw);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.menu{
+    overflow: hidden;
+}
+
+.menu ul{
+    display: block;
+    max-height: 0;
+    transition: max-height 0.3s;
+}
+
+.menu li>ul li ul{
+    position: absolute;
+    right: auto;
+    top: auto;
+}
+
+.menu label.toggleMenu{
+    display: block;
+}
+
+input.toggleMenu:checked + label.toggleMenu{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+input.toggleMenu:checked ~ ul,
+input.toggleSubmenu:checked ~ ul{
+    display: block;
+    position: relative;
+    max-height: 5000px;
+    transition: max-height 2s ease-in;
+}
+
+.menu label.toggleSubmenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+input.toggleSubmenu:checked ~ a{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.mathhack{
+    list-style: none;
+    text-align: center;
+    font-size: calc(1em + 7vw);
+    position: relative;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.mathhack a{
+    color: #000;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.tagline{
+    display: none;
+}
+
+.content_tagline{
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    font-size: calc(1em + 3vw);
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.main_text{
+    background-color: #000;
+    color: #fff;
+    font-size: calc(1em + 3vw);
+}
+
+}
+
+
+@media all and (min-width: 800px){
+
+header{
+    width: auto;
+    height: 170px;
+}
+
+.menu *{
+    margin-top: 0px;
+    padding: 0;
+}
+
+.menu ul,
+.menu ol{
+    list-style: none;
+}
+
+.menu > ul{
+    display: flex;
+    justify-content: center;
+}
+
+.menu > ul li{
+    position: relative;
+    border-right: 1px solid #fff;
+}
+
+.menu > ul li:first-child{
+    border-left: 1px solid #fff;
+}
+
+.menu > ul li:last-child{
+    border-right: 1px solid #fff;
+}
+    
+.menu > ul li a{
+    display: block;
+    background: #000000;
+    padding: 15px 30px 15px 30px;
+    font-size: calc(0.5em + 1vw);
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover{
+    background: #000;    
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+}
+    
+.menu li ul{
+    position: absolute;
+    min-width: 280px;
+    display: none;
+}
+
+.menu li > ul li{
+    border: 1px solid #fff;
+}
+
+.menu li > ul li a{
+    padding: 10px;
+    text-transform: none;
+    background: #000;
+}
+
+.menu li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
 }
 
 .menu li:hover > ul{
     display: block;
     z-index: 1;
 }
+    
+.menu [type="checkbox"],
+.menu label.toggleSubmenu{
+    display: none;
+}
 
-.mathhack, .tagline{
+.menu label.toggleMenu{
+    background: #000;
+    color: #fff;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+    cursor: pointer;
+    position: relative;
+}
+
+.mathhack, .tagline, .center_space{
     display: inline-block;
 }
 
-top{
-    position: absolute;
-    width: 1050px;
-    height: 129px;
-    left: 158px;
-    top: 30px;
 
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+.tagline{
+    width: calc(100% - 300px - 6% - 6%);
+    margin-right: 5%;
+    text-align: right;
 }
 
+.top{
+    margin-top: 0.5em;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    font-size: calc(1em + 2vh);
+}
 
+.mathhack{
+    margin-bottom: 1%;
+    margin-left: 5%;
+    width: 300px;
+    font-size: calc(1em + 2vw);
+    text-decoration: none;
+}
 
 .mathhack a{
     text-decoration: none;
-    color: #000000;
-    font-family: Roboto;
-    font-size: 64px;
-    padding: 27px;
+    color: #000;
 }
 
-.tagline{
-    margin-top: 5px;
-    font-size: 46px;
-    font-family: Roboto;
-    
-
+content{
+    margin-left: 11.9%;
+    margin-right: 11.9%;
+    margin-top: 7vh;
+    width: calc(100% - 11.9% - 11.9%);
+    position: absolute;
 }
 
 .content_tagline{
-    position: absolute;
-    width: 1050px;
-    height: 150px;
-    left: 158px;
-    top: 300px;
-
-    background: #000000;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-
-    color: #ffffff;
+    width: 100%;
     text-align: center;
-    font-size: 75px;
+    font-size: calc(1em + 4vw);
+    background-color: #000;
+    color: #fff;
 }
 
+
+
 .main_text{
+    background-color: #000000;
+    color: #fff;
     position: absolute;
+    display: inline-flex;
+    top: calc(3em);
+    font-size: calc(1em + 2vw);
+    width: 100%;
+}
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 46px;
-    line-height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #ffffff;
-
-    width: 1050px;
-    height: 450px;
-    left: 158px;
-    top: 450px;
-    
-    background: #000000;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
 }
